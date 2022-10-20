@@ -10,7 +10,7 @@
 
         https://www.python.org/ftp/python/3.8.8/python-3.8.8-amd64.exe
 
-#We can chen the python version = 3.8.8 using using the flag --verson
+#We can chen the python version = 3.8.8 using using the flag --verson, type the following into the Command Promt (cmd)
 
         $ python --version
         sould appear:  Python 3.8.8
@@ -37,20 +37,27 @@
 
 
 #afther  downloading the chromedriver move manually the chromedriver.exe to the v911-regressions/chromedriver/chromedriver_exe/ folder and 
-#replace the one that is there (or maybe try with this, its version is for Google Chrome 106.X )
+#replace the one that is there (or maybe try with this, this chromedriver is for Google Chrome 106.X ) 
+#Or you can use this command on the cmd into the main directory of the project (v911-regressions)
+
+        $ move <source_chromedriver.exe_path> v911-regressions/chromedriver/chromedriver_exe/
 
 ------------------------------------- TO SET UP THE AWS CREDENCIALS ------------------------------
 
+#Request to the devops team mate the acces keys ad set up them with the guide in the link below
 
 
-
+        [AWS Programmatic credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)
+        
 
 ------------------------------------- TO RUN THE TESTS LOCALLY -----------------------------------        
 
-#Run functonal tests showing prints, exceptions, and kind of logs we can see in temrinal when running python locally
+#Run functonals/smoke tests showing prints, exceptions, and kind of logs we can see in temrinal when running python locally (with the STDOUT )
 
-        $ pytest -s -v -m functionals
+        $ pytest -s -v -m functionals (for fuctionals)
+        $ pytest -s -v -m smoke (for smoke tests)
 
-#Run functonal tests just with testing results
+#Run functonals/smoke tests just with testing results (without the STDOUT )
 
-        $ pytest -v -m functionals
+        $ pytest -v -m functionals  (for fuctionals)
+        $ pytest -v -m smoke (for smoke tests)
